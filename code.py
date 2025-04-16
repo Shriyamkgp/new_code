@@ -15,7 +15,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-combined_save_loc = r"Enter the location"
+combined_save_loc = r"combine_data.npz"
 chunk = np.load(combined_save_loc)
 shapes = np.random.permutation(chunk['series1'].shape[0])
 train_wav = chunk['series1'][shapes,:,:]
